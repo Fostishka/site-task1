@@ -8,19 +8,47 @@ body {
   height: 100%;
 }
 
-.wrapper {
-  display: table;
-  height: 100%;
-}
 
-.wpapper1 {
-  display: table-row;
-  height: 100%;
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
 }
+.clearfix:after {clear: both;}
 
 
-header{
+/* ФОРМА ЛОГИНА И РЕГИСТР*/
+.log-reg{
+
+	float: right;
+	position: relative;
+	margin-top: 55px;
+	margin-right:  20px;
 }
+
+
+input[type="submit"] {
+    color: #666;
+    border-radius: 3px;
+    border: 1px solid #555;
+    font-family: sans-serif;
+    padding: 0 5px;
+}
+
+input[name="login"],
+input[name="pass"] {
+	padding: 0 5px;
+	border-radius: 6px;
+}
+/*
+.sub-form {
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+	transition: .3s;
+}
+*/
 
 /*стили для  меню*/
 #menu{
@@ -103,7 +131,7 @@ header{
 	width: 200px;
 	padding: 20px;
 	float: left;
-	background: #666;
+	background: #777;
 }
 
 #aside-menu li{
@@ -151,10 +179,21 @@ header{
 
 /*стили для футера*/
 
+.wrapper {
+  display: table !important;
+  height: 100% !important;
+}
+
+.wrapper1 {
+  display: table-row !important;
+  height: 100% !important;
+}
+
 footer {
 	background: #7e7e7e;
 	color: #f7f7f7;
-	font-size: 11px;
+	font-size: 10pt;
+	height: 100px;
 }
 
 #footer {
@@ -167,10 +206,9 @@ footer {
 #footer-logo {
 	float: right;
 	margin-top: 20px;
-	font-size: 14px;
+	font-size: 14pt;
 	text-align: right;
 }
-
 
 
 @media screen and (max-width: 580px){
@@ -198,7 +236,15 @@ footer {
 		width: 100%;
 		overflow: hidden;
 	}
+	.sidebar {
+		position: relative;
+		display: none;
+	}
+	.content {
+		margin-left: 0;
+	}
 }
+
 
 
 
