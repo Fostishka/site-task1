@@ -1,0 +1,204 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: table;
+  height: 100%;
+}
+
+.wpapper1 {
+  display: table-row;
+  height: 100%;
+}
+
+
+header{
+}
+
+/*стили для  меню*/
+#menu{
+	width: 100%;
+	background: #666;
+	display: table;
+}
+
+#menu li{
+	display: block;
+	float: left;
+	position: relative;
+}
+
+#menu li a{
+	display: table;
+	padding: 0 20px;
+	height: 50px;
+	text-align: left;
+	font-family: sans-serif;
+	line-height: 49px;
+	color: #fff;
+	border-right: 1px solid #555;
+	text-decoration: none;
+	transition: .5s;
+}
+
+.sub-menu{
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	z-index: -1;
+	transition: .3s;
+}
+
+#menu .sub-menu li{
+	float: none;
+}
+
+#menu .sub-menu li a{
+	width: 100%;
+	min-width: 100%
+	padding: 0 11px;
+	white-space: nowrap;
+	text-align: left;
+	box-shadow: none;
+	border: none;
+	border-bottom: 1px solid #ddd;
+}
+
+#menu li:hover a{
+	background: #aaa;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .3) insert;
+}
+
+#menu li:hover .sub-menu a{
+	background: #eee;
+	color: #666;
+	height: 40px;
+	line-height: 40px;
+}
+
+#menu li:hover .sub-menu a:hover{
+	color: #000;
+}
+
+#menu li a:hover + .sub-menu,
+.sub-menu:hover{
+	display: block;
+}
+
+#menu li:hover > ul{
+	visibility: visible;
+	opacity: 1;
+	z-index: 1;
+}
+
+/*стили для */
+.sidebar {
+	width: 200px;
+	padding: 20px;
+	float: left;
+	background: #666;
+}
+
+#aside-menu li{
+	display: block;
+	/*float: left;*/
+	position: relative;
+
+}
+
+#aside-menu li a{
+	
+	padding: 0 20px;
+	height: 50px;
+	text-align: left;
+	font-size: 14pt;
+	font-family: sans-serif;
+	line-height: 49px;
+	color: #fff;
+	border-bottom: 1px solid #555;
+	text-decoration: none;
+	transition: .5s;
+}
+
+#aside-menu li:hover a{
+	background: #aaa;
+	box-shadow: 0 0 5px rgba(0, 0, 0, .3) insert;
+}
+
+
+/* стили для контента*/
+.content h1 {
+	text-align: center;
+	margin: 10px;
+	line-height: 30px;
+
+}
+.content {
+	font-size: 16pt;
+	line-height: 30px;
+	margin-left: 240px;
+	padding: 30px;
+	background: #ddd;
+}
+
+
+/*стили для футера*/
+
+footer {
+	background: #7e7e7e;
+	color: #f7f7f7;
+	font-size: 11px;
+}
+
+#footer {
+	max-width: 960px;
+	margin: auto;
+	padding: 10px 0;
+	height: 90px;
+}
+
+#footer-logo {
+	float: right;
+	margin-top: 20px;
+	font-size: 14px;
+	text-align: right;
+}
+
+
+
+@media screen and (max-width: 580px){
+	.sub-menu{
+		position: relative;
+		display: none;
+	}
+
+	#menu li,
+	#menu li a{
+		width: 100%;
+		border: none;
+		padding-right: 0;
+	}
+
+	#menu li{
+		border-bottom: 1px solid #555;
+	}
+
+	.sub-menu li{
+		border-bottom: 1px solid #ddd;
+	}
+
+	#menu{
+		width: 100%;
+		overflow: hidden;
+	}
+}
+
+
+
