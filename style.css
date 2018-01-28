@@ -180,13 +180,18 @@ input[name="pass"] {
 /*стили для футера*/
 
 .wrapper {
-  display: table !important;
-  height: 100% !important;
+  display: table;
+  height: 100% ;
 }
 
-.wrapper1 {
-  display: table-row !important;
-  height: 100% !important;
+.header,
+.container,
+.footer {
+	display: table-row;
+}
+.header,
+.footer {
+	height: 1px; 
 }
 
 footer {
@@ -209,7 +214,6 @@ footer {
 	font-size: 14pt;
 	text-align: right;
 }
-
 
 @media screen and (max-width: 580px){
 	.sub-menu{
